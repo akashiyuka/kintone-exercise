@@ -22,12 +22,21 @@
   
         for (i = 0; i < event.records.length; i++) {
             if (i % 2 === 1) {
-                elCustomer[i].style.backgroundColor = fieldColor;
-                elStatus[i].style.backgroundColor = fieldColor;
-                elPerson[i].style.backgroundColor = fieldColor;
-                elQType[i].style.backgroundColor = fieldColor;
-                elDetail[i].style.backgroundColor = fieldColor;
-                elLimitDay[i].style.backgroundColor = fieldColor;
+                var backgroundColor = [];
+                backgroundColor[0] = "#87cefa";
+                backgroundColor[1] = "#adff2f";
+                backgroundColor[2] = "#ffd700";
+                backgroundColor[3] = "#ff6347";
+                backgroundColor[4] = "#d3d3d3";
+                backgroundColor[5] = "#4b0082";
+                var n = Math.floor(Math.random() * 6);
+                
+                elCustomer[i].style.backgroundColor = backgroundColor[n];
+                elStatus[i].style.backgroundColor = backgroundColor[n];
+                elPerson[i].style.backgroundColor = backgroundColor[n];
+                elQType[i].style.backgroundColor = backgroundColor[n];
+                elDetail[i].style.backgroundColor = backgroundColor[n];
+                elLimitDay[i].style.backgroundColor = backgroundColor[n];
             }
         }
     });
